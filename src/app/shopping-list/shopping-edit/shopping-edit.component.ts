@@ -44,4 +44,5 @@ export class ShoppingEditComponent implements OnInit,OnDestroy {
     }
     console.log(newIngredient);
   }
+  
 }
