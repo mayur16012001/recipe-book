@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body::before{
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-attachment: fixed;
+    filter: blur(10px);
+}

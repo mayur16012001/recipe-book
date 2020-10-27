@@ -3,8 +3,8 @@
     <div class="col-lg-12">
        <img [src]="recipe.imagePath" 
        alt="{{recipe.name}}" 
-       class="img-responsive center-block"
-       style="width: 400px;height: 400px;">
+       class="center-block"
+       style="width: 400px;height: 400px;border: 2px solid black;">
      </div>
   </div>
   
@@ -14,14 +14,20 @@
      </div>
   </div>
   
-  <h3>Steps</h3>
-  
-  <div class="row">
-     <div class="col-xs-12">
-       {{recipe.description}}
-     </div> 
-  </div>
+  <h3><i class="fa fa-cutlery" aria-hidden="true"></i> Steps</h3>
   <hr>
+  <div class="row">
+    <div class="col-xs-12" >
+    <ul >
+     
+       <li *ngFor = 'let steps of recipe.description' >
+         {{steps}}</li>
+     
+    </ul>
+  </div>
+</div> 
+  <hr>
+
   <div class="row">
     <div class="col-lg-12" style="text-align: center;">
       <div class="btn-group"
@@ -34,24 +40,25 @@
         <ul class="dropdown-menu" style="width: 400px;">
           <li><a  (click)="onAddToShoppingList()" style="cursor:pointer">To Shopping List</a></li>
           <li><a style="cursor:pointer" (click)="onEditRecipe()">Edit Recipe</a></li>
-          <li><a style="cursor:pointer">Delete Recipe</a></li>
          </ul>
       </div>
     </div>
   </div>
-  <h3>Ingredients</h3>
+
+  <h3><i class="fa fa-list" aria-hidden="true"></i> Ingredients </h3>
+  <hr>
   <div class="row">
      <div class="col-xs-12">
-       <ul class="list-group">
+       <ul class="list-group"  style="padding: 10px;">
         <li class="list-group-item"
             *ngFor = "let ingredient of recipe.ingredients">
           <span style="text-transform: capitalize;">{{ingredient.name}}</span>
-          <span style="float: right;text-transform: capitalize">{{ingredient.amount}}</span>
+          <span style="float: right;text-transform: capitalize;background-color: yellowgreen;border-radius: 20px;
+          height: 20px;
+          padding: 0px 20px;
+          color: white;">{{ingredient.amount}}</span>
+
           </li>
        </ul>
      </div> 
   </div>
-  
-  
-  
-</div>

@@ -15,7 +15,8 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import {HttpClientModule} from '@angular/common/http'
     DropDownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
