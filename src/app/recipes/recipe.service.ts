@@ -101,11 +101,6 @@ export class RecipeService{
       constructor(private slsService: ShoppingListService,private http:HttpClient){
         
       }
-      // url:string='http://localhost:3000/recipes';
-      // ngOnInit() {
-      //   this.http.get<Recipe[]>(this.url).subscribe( x=> this.recipes = x);
-        
-      // }
       
       getRecipes(){
         console.log(this.recipes)
