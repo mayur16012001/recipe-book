@@ -16,7 +16,6 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { FooterComponent } from './footer/footer.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,6 @@ import { FooterComponent } from './footer/footer.component'
     DropDownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,
